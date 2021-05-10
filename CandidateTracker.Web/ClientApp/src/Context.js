@@ -9,21 +9,6 @@ const ContextComponent = ({ children }) => {
     const [confirmedCount, setConfirmedCount] = useState(0);
     const [refusedCount, setRefusedCount] = useState(0);
 
-    // const updatePending = async () => {
-    //     const pending = await axios.get('/api/candidates/getpendingcount');
-    //     setPendingCount(pending.data);
-    // }
-
-    // const updateConfirmed = async () => {
-    //     const { data } = await axios.get('/api/candidates/getconfirmedcount');
-    //     setConfirmedCount(data);
-    // }
-
-    // const updateRefused = async () => {
-    //     const { data } = await axios.get('/api/candidates/getrefusedcount');
-    //     setRefusedCount(data);
-    // }
-
     const updateCounts = async () => {
         const pending = await axios.get('/api/candidates/getpendingcount');
         setPendingCount(pending.data);
